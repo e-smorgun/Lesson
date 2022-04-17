@@ -111,16 +111,14 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="2eg-Kv-CNv" firstAttribute="leading" secondItem="ZrO-fE-fMa" secondAttribute="trailing" constant="10" id="6Ye-Sh-nrn"/>
-                                    <constraint firstItem="ZrO-fE-fMa" firstAttribute="leading" secondItem="QXc-9h-pZm" secondAttribute="leading" constant="10" id="aj4-iG-Qpk"/>
                                     <constraint firstItem="ZrO-fE-fMa" firstAttribute="top" secondItem="QXc-9h-pZm" secondAttribute="top" constant="25" id="zVf-z1-QnO"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="mJb-pH-arf">
-                                <rect key="frame" x="10" y="278" width="394" height="128.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-el-EBv">
+                                <rect key="frame" x="10" y="293" width="394" height="199"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fda-qQ-9Hw">
-                                        <rect key="frame" x="152.5" y="0.0" width="89" height="67.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="S7C-yC-cPy">
+                                        <rect key="frame" x="152.5" y="0.0" width="89" height="52.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выручка: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQQ-hb-UBP">
                                                 <rect key="frame" x="0.0" y="0.0" width="89" height="20.5"/>
@@ -129,7 +127,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMZ-4k-Rue">
-                                                <rect key="frame" x="0.0" y="36.5" width="89" height="31"/>
+                                                <rect key="frame" x="0.0" y="21.5" width="89" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Обнулить"/>
                                                 <connections>
@@ -138,36 +136,61 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-xs-Re8">
-                                        <rect key="frame" x="70.5" y="94.5" width="253" height="34"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="K5s-hA-UPp">
+                                        <rect key="frame" x="67" y="73.5" width="260" height="54.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwL-un-RaG">
-                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="34"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Отнять"/>
-                                                <connections>
-                                                    <action selector="didTapDeleteCostButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2z-qd-eo3"/>
-                                                </connections>
-                                            </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nx7-xe-kqN">
-                                                <rect key="frame" x="99.5" y="0.0" width="37" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dfz-Bx-R06">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="54.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEQ-s4-C0d">
+                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHX-H7-ktM">
+                                                        <rect key="frame" x="0.0" y="20.5" width="37" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YC8-S6-kOi">
+                                                <rect key="frame" x="76" y="0.0" width="57" height="54.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSc-ag-0Kt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nx7-xe-kqN">
+                                                        <rect key="frame" x="0.0" y="20.5" width="57" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe1-4O-39M">
-                                                <rect key="frame" x="164.5" y="0.0" width="88.5" height="34"/>
+                                                <rect key="frame" x="172" y="0.0" width="88" height="54.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Добавить"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Продано!"/>
                                                 <connections>
                                                     <action selector="didTapAddCostButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDo-BF-gr3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoC-Q9-JvQ">
+                                        <rect key="frame" x="172" y="149" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="yS6-LZ-MfY">
-                                <rect key="frame" x="10" y="469" width="394" height="106"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="pVu-oS-NwN">
+                                <rect key="frame" x="10" y="575" width="394" height="106"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPp-av-uuS">
                                         <rect key="frame" x="120" y="0.0" width="154" height="31"/>
@@ -177,9 +200,9 @@
                                             <action selector="didTapShowButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bok-72-jSU"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-Ku-Bhe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-Ku-Bhe">
                                         <rect key="frame" x="197" y="106" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -189,24 +212,27 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mJb-pH-arf" firstAttribute="top" secondItem="QXc-9h-pZm" secondAttribute="bottom" constant="25" id="CkF-zn-i1u"/>
-                            <constraint firstItem="mJb-pH-arf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Dzr-8h-I73"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QXc-9h-pZm" secondAttribute="trailing" constant="44.5" id="E5m-W8-GIT"/>
+                            <constraint firstItem="fjN-el-EBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="QVR-ti-Ab7"/>
+                            <constraint firstItem="fjN-el-EBv" firstAttribute="top" secondItem="QXc-9h-pZm" secondAttribute="bottom" constant="40" id="Qg8-Qt-rxy"/>
                             <constraint firstItem="QXc-9h-pZm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="Wa4-dK-AO6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yS6-LZ-MfY" secondAttribute="trailing" constant="10" id="ctv-XG-l1L"/>
-                            <constraint firstItem="yS6-LZ-MfY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="jCs-vA-Jc9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mJb-pH-arf" secondAttribute="trailing" constant="10" id="osI-eS-cEx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fjN-el-EBv" secondAttribute="trailing" constant="10" id="ZDG-W9-p1j"/>
+                            <constraint firstItem="pVu-oS-NwN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="575" id="dfQ-RW-NBy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pVu-oS-NwN" secondAttribute="trailing" constant="10" id="fwj-me-WPc"/>
                             <constraint firstItem="QXc-9h-pZm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="r2J-gu-nzE"/>
-                            <constraint firstItem="yS6-LZ-MfY" firstAttribute="top" secondItem="mJb-pH-arf" secondAttribute="bottom" constant="62.5" id="zGO-BW-lKz"/>
+                            <constraint firstItem="pVu-oS-NwN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="sEW-kB-bkZ"/>
+                            <constraint firstItem="pVu-oS-NwN" firstAttribute="top" secondItem="fjN-el-EBv" secondAttribute="bottom" constant="83" id="z1y-Ve-P6h"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="CostLabel" destination="vQQ-hb-UBP" id="cMf-fB-35T"/>
+                        <outlet property="alertLabel" destination="HoC-Q9-JvQ" id="7bN-eW-FVx"/>
+                        <outlet property="costLabel" destination="vQQ-hb-UBP" id="krE-wG-Fd0"/>
                         <outlet property="costTextField" destination="vqK-lM-cL0" id="8Xi-Gs-3vG"/>
                         <outlet property="countryTextField" destination="Tut-MB-rgR" id="3GS-Vq-QcB"/>
-                        <outlet property="dayPriceTextField" destination="nx7-xe-kqN" id="7BQ-TR-lBD"/>
                         <outlet property="nameTextField" destination="HXC-Oc-qKe" id="2Yb-Kf-fZG"/>
+                        <outlet property="selldTextField" destination="XHX-H7-ktM" id="vCf-7V-cwd"/>
                         <outlet property="showLabel" destination="9Tf-Ku-Bhe" id="ioI-3g-9d0"/>
+                        <outlet property="volumeSellTextField" destination="nx7-xe-kqN" id="VVM-7v-GJi"/>
                         <outlet property="volumeTextField" destination="iQY-5v-Ii3" id="6rB-4w-daI"/>
                     </connections>
                 </viewController>

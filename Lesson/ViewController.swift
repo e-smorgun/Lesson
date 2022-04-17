@@ -20,7 +20,7 @@ class Beer {
     let name: String
     let cost: Int
     let country: String
-    let volume: Int
+    var volume: Int
     
     init(name: String, cost: Int, country: String, volume: Int) {
         self.name = name
@@ -42,7 +42,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var volumeTextField: UITextField!
     
-    @IBOutlet weak var dayPriceTextField: UITextField!
+    @IBOutlet weak var volumeSellTextField: UITextField!
+    
+    @IBOutlet weak var selldTextField: UITextField!
+        
+    @IBOutlet weak var alertLabel: UILabel!
     
     @IBOutlet weak var costLabel: UILabel!
     
@@ -69,21 +73,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapAddCostButton(sender: UIButton) {
-        let buffer = Int(dayPriceTextField.text!)
-        cost += buffer!
-        costLabel.text = "Выручка: \(cost)"
-    }
+        let bufferVolume = Int(volumeSellTextField.text!)
+        let bufferId = Int(selldTextField.text!)
+        var bufferCost = Storage.shared.beers[bufferId! - 1].cost
     
-    @IBAction func didTapDeleteCostButton(sender: UIButton) {
-        let buffer = Int(dayPriceTextField.text!)
-        cost += buffer!
+        
+        if (bufferId! - 1) > Storage.shared.beers.count{
+            alertLabel.textColor = UIColor.red
+            alertLabel.text = "Неверный ID" }
+        else if bufferVolume! > Storage.shared.beers[bufferId! - 1].volume {
+            alertLabel.textColor = UIColor.red
+            alertLabel.text = "Неверный Volume"
+        } else {
+            bufferCost *= bufferVolume!
+            Storage.shared.beers[bufferId! - 1].volume -= bufferVolume!
+            cost += bufferCost
+            
+            alertLabel.textColor = UIColor.green
+            alertLabel.text = "Для проверки остатков нажмите кнопку"
+        }
+        
+        
         costLabel.text = "Выручка: \(cost)"
     }
     
     @IBAction func didTapShowButton(sender: UIButton) {
         var result = ""
-        for beer in Storage.shared.beers {
-            result += "\(beer.name) - \(beer.cost) - \(beer.country) - \(beer.volume) \n"
+        for (index, beer) in Storage.shared.beers.enumerated() {
+            result += "\(index + 1) - Name: \(beer.name) Cost: \(beer.cost) Country: \(beer.country) Volume: \(beer.volume) \n"
         }
         showLabel.text = result
     }
